@@ -38,6 +38,3 @@ everything_api = "<BASE_URL>/everything/<source_id>.json"
 1. Clone the repository.
 2. Install dependencies using `npm install`.
 
-## Usage
-
-Describe how to use your project here.
