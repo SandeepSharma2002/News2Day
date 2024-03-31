@@ -38,3 +38,9 @@ everything_api = "<BASE_URL>/everything/<source_id>.json"
 1. Clone the repository.
 2. Install dependencies using `npm install`.
 
+## Usage
+
+Run the application using npm start.
+Access the admin panel through the provided URLs.
+Explore the different pages and functionalities to manage news feeds effectively.
+
