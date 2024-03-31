@@ -19,8 +19,8 @@ The project also includes functionality to fetch fake data from an API, the link
 ## API Documentation
 https://github.com/SauravKanchan/NewsAPI
 
-BASE_URL = "https://saurav.tech/NewsAPI/"
-top_headlines_api = "<BASE_URL>/top-headlines/category/<category>/<country_code>.json"
+BASE_URL = "https://saurav.tech/NewsAPI/" 
+top_headlines_api = "<BASE_URL>/top-headlines/category/<category>/<country_code>.json"  
 everything_api = "<BASE_URL>/everything/<source_id>.json"
 
 ## Dependencies
