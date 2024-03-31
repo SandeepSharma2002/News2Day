@@ -82,7 +82,7 @@ export const Navbar = () => {
               </div>
               <div className="my-2">
                 <ul
-                  className="max-h-80 overflow-y-auto overflow-x-hidden scrollbar"
+                  className="max-h-80 overflow-y-auto overflow-x-hidden "
                   data-tab-for="notification"
                   data-page="notifications"
                 >
@@ -204,7 +204,7 @@ export const Navbar = () => {
                   <div className="top-0 left-7 absolute w-3 h-3 bg-lime-500 border-2 border-white rounded-full"></div>
                 </div>
               </div>
-              <div className="p-2 md:block text-left">
+              <div className="p-2 hidden sm:block text-left">
                 <h2 className="text-sm font-semibold text-gray-800">
                   John Doe
                 </h2>

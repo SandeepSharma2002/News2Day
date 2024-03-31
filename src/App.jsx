@@ -15,9 +15,9 @@ const {expanded} = useSidebarContext()
   return (
     <div className="flex w-screen h-screen relative">
         <Sidebar />
-      <div className=" flex flex-col flex-1 overflow-y-auto scrollbar">
+      <div className=" flex flex-col flex-1  overflow-x-hidden">
         <Navbar />
-        <div className="mt-10">
+        <div className="pt-6 overflow-y-auto">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/dashboard" element={<Dashboard />} />

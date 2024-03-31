@@ -20,7 +20,7 @@ export const Dashboard = () => {
   return loading ? (
     <div className="mx-auto grid place-items-center min-w-full my-10"> <Spinner/></div>
   ) : (
-    <div className="w-11/12 mx-auto overflow-x-hidden">
+    <div className=" w-full px-2 sm:px-6  mx-auto overflow-x-hidden">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
         <div className="bg-orange-50 rounded-md border border-gray-100 p-6 shadow-md shadow-black/5">
           <div className="flex justify-between mb-6">

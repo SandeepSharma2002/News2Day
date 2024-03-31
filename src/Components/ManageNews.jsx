@@ -36,14 +36,14 @@ export const ManageNews = () => {
   ];
 
   return (
-    <section className="py-1 relative">
-      <div className="w-full xl:w-11/12 mb-12 xl:mb-0 px-4 mx-auto">
+    <section className="relative">
+      <div className="min-w-full mb-12 xl:mb-0 px-2 sm:px-6 mx-auto">
         <h1 className="text-3xl font-semibold text-indigo-600 mb-6">
           Manage News Feeds
         </h1>
         <div className="relative flex flex-col  break-words bg-white w-full mb-6 shadow-lg rounded">
           <div className="rounded-t mb-0 px-4 py-3 border-0 bg-gray-100">
-            <div className="flex flex-wrap flex-col sm:flex-row justify-between gap-2">
+            <div className="flex flex-row justify-between gap-2">
               <h3 className="font-semibold text-base whitespace-nowrap">
                 News Feeds
               </h3>

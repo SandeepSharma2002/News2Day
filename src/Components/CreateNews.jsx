@@ -123,8 +123,8 @@ export const CreateNews = () => {
   };
 
   return (
-    <div className="grid lg:grid-cols-2 gap-4">
-      <div className="p-5">
+    <div className="grid lg:grid-cols-2 gap-4 min-w-full">
+      <div className="sm:p-5">
         <h4 className="text-center text-3xl font-semibold text-indigo-600">
           Create News
         </h4>

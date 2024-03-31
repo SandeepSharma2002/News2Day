@@ -5,12 +5,13 @@ import { LuImageOff } from "react-icons/lu";
 export const NewsCard = ({ data }) => {
   const pulishedDate = useFormattedDate(data?.publishedAt);
   return (
-    <article className="flex max-w-xl flex-col items-start gap-2 relative">
-        <img
-          src={data?.urlToImage}
-          alt=""
-          className="rounded bg-cover bg-no-repeat bg-center bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSWSxsVpAmqb_T7CLGolJ193Bw9xh7X7r0yQ&usqp=CAU')] overflow-clip min-w-full min-h-[180px] sm:aspect-square z-10"
-        />
+    <article className="flex min-w-full max-w-xl flex-col items-start gap-2 relative">
+      <img
+        loading="lazy"
+        src={data?.urlToImage}
+        alt=""
+        className="rounded bg-cover bg-no-repeat bg-center bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSWSxsVpAmqb_T7CLGolJ193Bw9xh7X7r0yQ&usqp=CAU')] overflow-clip min-w-full min-h-[180px] sm:aspect-square z-10"
+      />
       <div className="flex items-center gap-x-4 text-xs z-1">
         <span className="text-gray-500">{pulishedDate}</span>
         <a

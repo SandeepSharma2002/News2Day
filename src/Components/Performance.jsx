@@ -31,7 +31,7 @@ const doughnutOptions = {
 
 export const Performance = () => {
   return (
-    <section className="flex flex-col gap-6 w-11/12 mb-6 mx-auto">
+    <section className="flex flex-col gap-6 px-2 sm:px-6 mb-6 mx-auto">
       <div className="grid sm:grid-cols-2 ld:grid-cols-4 gap-6 mb-6">
         <div className="bg-orange-50 rounded-md border border-gray-100 p-6 shadow-md shadow-black/5">
           <div className="flex justify-between mb-6">
@@ -84,7 +84,7 @@ export const Performance = () => {
         </div>
       </div>
       <div className="grid grid-cols-1 xl:grid-cols-3 gap-y-6 xl:gap-6 ">
-        <div class="bg-white shadow-xl xl:order-10 overflow-hidden rounded-lg mx-auto text-gray-900 font-semibold text-center min-w-full">
+        <div class="bg-white border border-gray-100 rounded-xl xl:order-10 overflow-hidden mx-auto text-gray-900 font-semibold text-center min-w-full">
           <div class="flex items-center justify-around">
             <div class="text-lg pt-2">May, 2020</div>
           </div>
@@ -271,14 +271,18 @@ export const Performance = () => {
           </div>
         </div>
       </div>
-      <div className="border border-gray-100 rounded-xl p-4 min-w-full">
-            <h2 className="text-2xl font-bold mb-2">News Analytics</h2>
-        <Bar data={barData} options={barOptions} />
-      </div>
-      <div className="border border-gray-100 rounded-xl p-4 min-w-full">
-            <h2 className="text-2xl font-bold mb-2">Reations Analytics</h2>
-          <Line data={lineData} />
+      <div className=" overflow-x-auto">
+        <div className="border border-gray-100 rounded-xl p-4 min-w-[480px]">
+          <h2 className="text-2xl font-bold mb-2">News Analytics</h2>
+          <Bar data={barData} options={barOptions} />
         </div>
+      </div>
+      <div className=" overflow-x-auto">
+      <div className="border border-gray-100 rounded-xl p-4 min-w-[480px]">
+        <h2 className="text-2xl font-bold mb-2">Reations Analytics</h2>
+        <Line data={lineData} />
+      </div>
+      </div>
     </section>
   );
 };

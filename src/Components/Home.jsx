@@ -20,6 +20,7 @@ export const Home = () => {
 
   const getData = () => {
     setLoading(true);
+    setNews([]);
     if(source)
     {
       NewsService.getNewsBySource(source?.value)
@@ -40,6 +41,9 @@ export const Home = () => {
       .finally(() => setLoading(false));
     }
   };
+
+  console.log(category);
+ console.log(source);
 
   useEffect(() => {
     if (displayedItems === totalItems) {
@@ -73,8 +77,6 @@ export const Home = () => {
       }
     };
   }, [loading, News, displayedItems]);
-
-  console.log(displayedItems);
 
   useEffect(() => {
     getData();
@@ -382,12 +384,10 @@ export const Home = () => {
     },
   ];
 
-  console.log(source);
-
   return (
     <div className="bg-white pb-4 sm:pb-10">
-      <div className="mx-auto max-w-full px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-4">
+      <div className="mx-auto max-w-full px-2 sm:px-6">
+        <div className="grid md:grid-cols-2 gap-4 px-4 sm:px-0">
           <div class="relative mt-2">
             <label class="block text-base font-medium leading-6 text-gray-900 my-2">
               Source
@@ -448,6 +448,7 @@ export const Home = () => {
                       role="option"
                       onClick={() => {
                         setSource(src);
+                        setCategory(null);
                         setShowSource(false);
                       }}
                     >
@@ -526,6 +527,7 @@ export const Home = () => {
                       role="option"
                       onClick={() => {
                         setCategory(src);
+                        setSource(null);
                         setShowCategory(false);
                       }}
                     >
@@ -542,9 +544,9 @@ export const Home = () => {
             </div>
           </div>
         </div>
-        <div className="mx-auto mt-4 grid max-w-full grid-cols-1 gap-x-8 gap-y-16 border-t border-gray-200 pt-10 sm:mt-12 sm:pt-16 lg:mx-0 sm:grid-cols-2 lg:max-w-none lg:grid-cols-3 2xl:grid-cols-4 ">
+        <div className="mx-auto mt-4 grid max-w-full grid-cols-1 gap-x-8 gap-y-8 sm:gap-y-16 border-t border-gray-200 pt-10 sm:mt-12 sm:pt-16 lg:mx-0 sm:grid-cols-2 lg:max-w-none lg:grid-cols-3 2xl:grid-cols-4 ">
           {
-            News.length === 0 && (sourceOptions.map((item)=><NewsCardLoader key = {item.label}/>))
+            (News.length === 0 || loading) && (sourceOptions.map((item)=><NewsCardLoader key = {item.label}/>))
           }
           {News?.slice(0, displayedItems).map((news) => (
             <NewsCard data={news} />
