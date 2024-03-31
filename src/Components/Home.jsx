@@ -13,7 +13,7 @@ export const Home = () => {
   const [totalItems, setTotalItems] = useState();
   const [loading, setLoading] = useState(true);
   const [showSource, setShowSource] = useState(false);
-  const [showCategory, setShowCategory] = useState(false);
+  const [showCategory, setShowCategory] = useState(null);
   const [source, setSource] = useState(null);
   const [category, setCategory] = useState(null);
   const observer = useRef();
@@ -32,7 +32,7 @@ export const Home = () => {
       .finally(() => setLoading(false));
     }
     else{
-      NewsService.getNewsByCategory(category?.label || "business")
+      NewsService.getNewsByCategory(category?.label || "general")
       .then((res) => {
         setNews(res.articles);
         setTotalItems(res.totalResults);
@@ -549,7 +549,7 @@ export const Home = () => {
             (News.length === 0 || loading) && (sourceOptions.map((item)=><NewsCardLoader key = {item.label}/>))
           }
           {News?.slice(0, displayedItems).map((news) => (
-            <NewsCard data={news} />
+            <NewsCard data={news} category = {category} />
           ))}
         </div>
         <div

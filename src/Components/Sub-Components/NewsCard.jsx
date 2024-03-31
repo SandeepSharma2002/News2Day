@@ -2,7 +2,7 @@ import React from "react";
 import useFormattedDate from "../../hooks/useFormattedDate";
 import { LuImageOff } from "react-icons/lu";
 
-export const NewsCard = ({ data }) => {
+export const NewsCard = ({ data, category }) => {
   const pulishedDate = useFormattedDate(data?.publishedAt);
   return (
     <article className="flex min-w-full max-w-xl flex-col items-start gap-2 relative">
@@ -16,9 +16,9 @@ export const NewsCard = ({ data }) => {
         <span className="text-gray-500">{pulishedDate}</span>
         <a
           href="#"
-          className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
+          className="relative capitalize z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-gray-100"
         >
-          Marketing
+          {category?.label || "General"}
         </a>
       </div>
       <div className="group relative">
