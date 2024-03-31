@@ -35,7 +35,7 @@ export const Navbar = () => {
               </svg>
             </button>
             <div
-              className={`shadow-md absolute -right-56 lg:right-0 shadow-black/5 z-50 min-w-[280px] sm:min-w-[360px] w-full bg-white rounded-md border border-gray-100 ${
+              className={`shadow-md absolute -right-20 lg:right-0 shadow-black/5 z-50 min-w-[280px] sm:min-w-[360px] w-full bg-white rounded-md border border-gray-100 ${
                 showSearch ? "" : "hidden"
               }`}
             >
@@ -71,7 +71,7 @@ export const Navbar = () => {
               </svg>
             </button>
             <div
-              className={`shadow-md shadow-black/5 z-30 absolute -right-44 lg:right-0 min-w-[280px] w-full bg-white rounded-md border border-gray-100 ${
+              className={`shadow-md shadow-black/5 z-30 absolute -right-10 lg:right-0 min-w-[280px] w-full bg-white rounded-md border border-gray-100 ${
                 showNotifications ? "" : "hidden"
               }`}
             >
